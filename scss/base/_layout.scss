@@ -1,0 +1,126 @@
+/*----------  layout
+------------------------------------------------------------------------------*/
+
+html,
+body {
+    height: 100%;
+    @include font-smoothing(antialiased);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: $open;
+    font-size: 16px;
+    overflow-x: hidden;
+    background: white;
+}
+
+.modal {
+    max-width: 900px;
+    min-height: 730px;
+    background: $bg-modal;
+    margin: 100px auto;
+    box-shadow: 0 0 15px gray;
+}
+
+.stripe-bg,
+#app {
+    height: 100%;
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.msg {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    .modal-content {
+        @include vertical-align;
+    }
+}
+
+.step-1,
+.step-2,
+.msg {
+    height: 100%;
+}
+
+.step-2,
+.msg {
+    display: none;
+}
+
+.btn {
+    background: $btn-color;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 0 0 20px $btn-color;
+    float: right;
+    outline: none;
+    display: inline-block;
+}
+
+.greenet {
+    color: $green;
+}
+
+
+/*----------  stripes
+------------------------------------------------------------------------------*/
+
+.stripe {
+    height: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.lg {
+    width: 112px;
+}
+
+.md {
+    width: 77px;
+}
+
+.sm {
+    width: 36px;
+}
+
+.ss {
+    width: 22px;
+}
+
+.yellow {
+    background: $yellow;
+}
+
+.red {
+    background: $red;
+}
+
+.blue {
+    background: $blue;
+}
+
+.brown {
+    background: $brown;
+}
+
+.green {
+    background: $green;
+}
+
+.violet {
+    background: $violet;
+}
+
+.white {
+    background: white;
+}

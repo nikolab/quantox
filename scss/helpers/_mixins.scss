@@ -1,0 +1,139 @@
+/*----------  responsive breakpoints
+------------------------------------------------------------------------------*/
+
+@mixin breakpoint ($value) {
+    @if $value=='phone' {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $value=='tablet' {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $value=='touch' {
+        @media only screen and (min-width: 320px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $value=='desktop' {
+        @media only screen and (min-width: 1025px) and (max-width: 1479px) {
+            @content;
+        }
+    }
+    @else if $value=='xlarge' {
+        @media only screen and (min-width: 1480px) {
+            @content;
+        }
+    }
+}
+
+
+/*----------  font smoothing
+------------------------------------------------------------------------------*/
+
+@mixin font-smoothing ($val: antialiased) {
+    -webkit-font-smoothing: $val;
+    -moz-font-smoothing: $val;
+    -ms-font-smoothing: $val;
+    -o-font-smoothing: $val;
+}
+
+
+/*----------  input placeholder
+------------------------------------------------------------------------------*/
+
+@mixin input-placeholder ($placeholder-text-color) {
+    &::-webkit-input-placeholder {
+        @content;
+        color: $placeholder-text-color;
+    }
+    &:-moz-placeholder {
+        @content;
+        color: $placeholder-text-color;
+    }
+    &:-ms-input-placeholder {
+        @content;
+        color: $placeholder-text-color;
+    }
+}
+
+
+/*----------  base float
+------------------------------------------------------------------------------*/
+
+@mixin base-float {
+    width: 100%;
+    float: left;
+}
+
+
+/*----------  box sizing
+------------------------------------------------------------------------------*/
+
+@mixin box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*----------  transition
+------------------------------------------------------------------------------*/
+
+@mixin transition ($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+}
+
+
+/*----------  animation
+------------------------------------------------------------------------------*/
+
+@mixin animation ($animation) {
+    animation: $animation;
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+}
+
+
+/*----------  centerer
+------------------------------------------------------------------------------*/
+
+@mixin centerer {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*----------  vertical
+------------------------------------------------------------------------------*/
+
+@mixin vertical-align {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/*----------  horizontal
+------------------------------------------------------------------------------*/
+
+@mixin horizontal-align {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

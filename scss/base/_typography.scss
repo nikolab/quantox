@@ -1,0 +1,35 @@
+/*----------  typography
+------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+}
+
+$open: 'Open Sans';
+h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 21px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 16px;
+}
